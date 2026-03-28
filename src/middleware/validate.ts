@@ -9,7 +9,7 @@ export const validate =
     } catch (error: any) {
       res.status(400).json({
         message: 'Validation error',
-        errors: error.errors,
+        errors: error.issues, // 🔥 EZ FONTOS!
       });
     }
   };
