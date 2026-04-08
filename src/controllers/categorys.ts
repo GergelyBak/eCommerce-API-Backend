@@ -2,6 +2,29 @@ import { Category } from '../models';
 import type { Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
 
+/**
+ * @swagger
+ * tags:
+ *   name: Categories
+ *   description: Category management
+ */
+
+/**
+ * @swagger
+ * /categories:
+ *   get:
+ *     summary: Get all categories
+ *     tags: [Categories]
+ *     responses:
+ *       200:
+ *         description: List of categories
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Category'
+ */
 // GET /categories
 export const getCategories = async (
   req: Request,
